@@ -1,4 +1,4 @@
-FROM bitnami/kafka:latest
+FROM bitnami/kafka:3.6.1
 
 ENV KAFKA_ENABLE_KRAFT=yes
 ENV KAFKA_CFG_PROCESS_ROLES=broker,controller
