@@ -10,8 +10,7 @@ ENV KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR=1
 ENV KAFKA_LOG_DIRS=/var/lib/kafka/data
 ENV KAFKA_OPTS="-Djava.net.preferIPv4Stack=true"
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY --chmod=755 entrypoint.sh /entrypoint.sh
 
 EXPOSE 9092
 ENTRYPOINT ["/entrypoint.sh"]
